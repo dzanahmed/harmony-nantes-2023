@@ -1,0 +1,415 @@
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20230414T122457Z
+LAST-MODIFIED:20230414T124852Z
+DTSTAMP:20230414T124852Z
+UID:5:468
+SUMMARY:CA18208 HARMONY Annual Consortium Meeting
+ORGANIZER;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT:mailto:aurelien.madoua
+ sse@inrae.fr
+ATTENDEE;CN=aurelien.madouasse@oniris-nantes.fr;PARTSTAT=NEEDS-ACTION;ROLE=
+ REQ-PARTICIPANT:mailto:aurelien.madouasse@oniris-nantes.fr
+DTSTART;TZID=Europe/Paris:20230607T090000
+DTEND;TZID=Europe/Paris:20230609T170000
+TRANSP:OPAQUE
+LOCATION:https://zoom.us/j/95455834431
+SEQUENCE:1
+DESCRIPTION;ALTREP="data:text/html,%3Cbody%3E%0A%3Cdiv%20style%3D%22font-si
+ ze%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%
+ 26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%26quot%3BSego
+ e%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui%26quot%3B%2
+ C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sans-serif%3B%
+ 20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20%0Abackgroun
+ d-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style%3D%22font-s
+ ize%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cb
+ %3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B%20co
+ lor%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3EWe%20are%20happy%2
+ 0to%20invite%20you%20in%20our%20next%20%0Aface-to-face%20HARMONY%3Cspan%20c
+ lass%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3Cspan%20%0Adata-markjs%3
+ D%22true%22%20class%3D%22markakurj8q9j%20ContentPasted0%22%20data-ogac%3D%2
+ 2%22%20%0Adata-ogab%3D%22%22%20data-ogsc%3D%22%22%20data-ogsb%3D%22%22%20st
+ yle%3D%22margin%3A0px%22%3Eevent%3C%2Fspan%3E%3Cspan%0A%20class%3D%22Conten
+ tPasted0%22%3E%C2%A0%3C%2Fspan%3Ethat%0A%20will%20take%20place%20in%3Cspan%
+ 20class%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3Cspan%20%0Adata-markj
+ s%3D%22true%22%20class%3D%22markau6or64dt%20ContentPasted0%22%20data-ogac%3
+ D%22%22%20%0Adata-ogab%3D%22%22%20data-ogsc%3D%22%22%20data-ogsb%3D%22%22%2
+ 0style%3D%22margin%3A0px%22%3ENantes%3C%2Fspan%3E%2C%0A%20France%207%20-%20
+ 9%3Cspan%20class%3D%22ContentPasted0%22%3E%C2%A0June%202023%3C%2Fspan%3E.%3
+ C%2Fspan%3E%3C%2Fb%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margi
+ n%3A%200px%3B%20color%3A%20black%3B%22%3E%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdi
+ v%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26
+ quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20Eu
+ ropean)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system
+ %2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20
+ %0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(
+ 36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255
+ )%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%
+ 20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012p
+ t%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentP
+ asted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20styl
+ e%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quo
+ t%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20
+ %26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-
+ ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20
+ sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%
+ 20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20sty
+ le%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3
+ A0px%22%3E%3Cb%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A
+ %200px%3B%20color%3A%20rgb(237%2C%2092%2C%2087)%3B%22%20%0Aclass%3D%22Conte
+ ntPasted0%22%3EPlease%20read%20this%20email%20very%20carefully%20(reading%2
+ 0%0Atime%20~%208%20minutes).%3C%2Fspan%3E%3C%2Fb%3E%3Cspan%20style%3D%22fon
+ t-size%3A%2012pt%3B%20margin%3A%200px%3B%20%0Acolor%3A%20black%3B%22%3E%3C%
+ 2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%20
+ 15px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3
+ BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%26quot%3BSegoe%20UI%2
+ 6quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Robo
+ to%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sans-serif%3B%20margin
+ %3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20%0Abackground-color%
+ 3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11
+ pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%2
+ 0style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%
+ 3B%22%20%0Aclass%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%
+ 3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3
+ A%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(We
+ st%20European)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple
+ -system%2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelve
+ tica%20%0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A
+ %20rgb(36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2
+ C%20255)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACali
+ bri%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3
+ A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22C
+ ontentPasted0%22%3EThe%3Cspan%20class%3D%22ContentPasted0%22%3E%C2%A0%3C%2F
+ span%3E%3Cspan%20%0Adata-markjs%3D%22true%22%20class%3D%22markakurj8q9j%20C
+ ontentPasted0%22%20data-ogac%3D%22%22%20%0Adata-ogab%3D%22%22%20data-ogsc%3
+ D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3Eevent%3C%2Fspan
+ %3E%3Cspan%0A%20class%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3Ehas%0A%20
+ working%20group%20meetings%2Fworkshops%20as%20part%20of%20the%20morning%20s
+ ession%20and%20%0Atraining%20activities%20in%20the%20afternoon%20session%20
+ (after%20the%20lunch%20break).%C2%A0%3C%2Fspan%3E%3Cspan%0A%20class%3D%22Co
+ ntentPasted0%22%20style%3D%22font-family%3A%20Calibri%2C%20sans-serif%3B%20
+ %0Afont-size%3A%2012pt%3B%20color%3A%20black%3B%22%3EThe%0A%20afternoon%0A%
+ 20training%20activity%20will%20be%20delivered%20in%20parallel%20in%20two%20
+ rooms%20-%20(I)%20Room%0A%20A%3A%20demonstration%2Fdiscussion%20%26amp%3B%2
+ 0(II)%20Room%20B%3A%20hands-on%20training%3Cspan%20%0Aclass%3D%22ContentPas
+ ted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fspan%3E%3Ci%20style%3D%22font-size%3A%20
+ 11pt%3B%20%0Afont-variant-ligatures%3A%20inherit%3B%20font-variant-caps%3A%
+ 20inherit%3B%20%0Afont-weight%3A%20inherit%3B%22%3E%3Cspan%20style%3D%22col
+ or%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3E(15%0A%20spots%20av
+ ailable%20-%20allocation%20of%20spots%20will%20be%20made%2020%20days%20befo
+ re%20the%20%0Aevent%20and%20after%20the%20participation%20list%20is%20locke
+ d)%3C%2Fspan%3E%3C%2Fi%3E%3Cspan%20%0Aclass%3D%22ContentPasted0%22%20style%
+ 3D%22font-family%3A%20Calibri%2C%20sans-serif%3B%20%0Afont-size%3A%2012pt%3
+ B%20color%3A%20black%3B%22%3E.%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%
+ 0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26quot%
+ 3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20Europea
+ n)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%2
+ 0%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANe
+ ue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C
+ %2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%3B%
+ 22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20san
+ s-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%
+ 20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted
+ 0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%
+ 22font-size%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%
+ 2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%26qu
+ ot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui%26
+ quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sans-
+ serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20%0A
+ background-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style%3D
+ %22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%
+ 22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B%20
+ color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3EPlease%20find%20
+ attached%2C%20and%20read%20carefully%20too%2C%20the%3Cspan%0A%20class%3D%22
+ ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3Cspan%20data-markjs%3D%22true%22%2
+ 0%0Aclass%3D%22markakurj8q9j%20ContentPasted0%22%20data-ogac%3D%22%22%20dat
+ a-ogab%3D%22%22%20%0Adata-ogsc%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22m
+ argin%3A0px%22%3Eevent%3C%2Fspan%3E%3Cspan%20%0Aclass%3D%22ContentPasted0%2
+ 2%3E%C2%A0%3C%2Fspan%3Eagenda%0A%20that%20includes%20the%20scientific%20pro
+ gram%20and%20an%20accompanying%20document%20with%C2%A0%3Cspan%0A%20style%3D
+ %22margin%3A%200px%3B%20background-color%3A%20white%3B%22%20class%3D%22Cont
+ entPasted0%22%3Einstructions%3C%2Fspan%3E%3Cspan%0A%20class%3D%22ContentPas
+ ted0%22%3E%C2%A0%3C%2Fspan%3Ehow%20to%20reach%20the%20Nantes%20and%20the%20
+ meeting%20%0Avenue%20%2B%20accommodation%0A%20recommendations%20%2B%20infor
+ mation%20on%20the%20reimbursement%20scheme.%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2F
+ div%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%
+ 26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20
+ European)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-syst
+ em%2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%
+ 20%0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rg
+ b(36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%202
+ 55)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2
+ C%20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%201
+ 2pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22Conten
+ tPasted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20st
+ yle%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26q
+ uot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%
+ 20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsyste
+ m-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%
+ 20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3
+ B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20s
+ tyle%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin
+ %3A0px%22%3E%3Cb%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%
+ 3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3EYo
+ u%20have%20received%20two%3Cspan%20class%3D%22ContentPasted0%22%3E%C2%A0%3C
+ %2Fspan%3E%3Cspan%0A%20data-markjs%3D%22true%22%20class%3D%22markdwh5fg6gh%
+ 20ContentPasted0%22%20data-ogac%3D%22%22%20%0Adata-ogab%3D%22%22%20data-ogs
+ c%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3Einvitation%3
+ C%2Fspan%3Es%0A%20from%3Cspan%20class%3D%22ContentPasted0%22%3E%C2%A0%3C%2F
+ span%3E%3Cspan%20data-markjs%3D%22true%22%20%0Aclass%3D%22markamryng77i%20C
+ ontentPasted0%22%20data-ogac%3D%22%22%20data-ogab%3D%22%22%20%0Adata-ogsc%3
+ D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3Ee-COST%3C%2Fspa
+ n%3E%3Cspan%20%0Aclass%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E-%201%20
+ for%20the%20morning%20and%201%20for%20the%0A%20afternoon%20session.%C2%A0%3
+ C%2Fspan%3E%3C%2Fb%3E%3Cspan%20style%3D%22font-size%3A%2012pt%3B%20margin%3
+ A%20%0A0px%3B%20color%3A%20black%3B%22%3E%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdi
+ v%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26
+ quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20Eu
+ ropean)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system
+ %2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20
+ %0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(
+ 36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255
+ )%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%
+ 20sans-serif%3Bmargin%3A0px%22%3E%3Cu%3E%3Cspan%0A%20style%3D%22font-size%3
+ A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22C
+ ontentPasted0%22%3EYou%20are%20considered%20eligible%20for%20reimbursement%
+ 20to%20%0Aattend%20the%20whole%203-day%3Cspan%20class%3D%22ContentPasted0%2
+ 2%3E%C2%A0%3C%2Fspan%3E%3Cspan%20%0Adata-markjs%3D%22true%22%20class%3D%22m
+ arkakurj8q9j%20ContentPasted0%22%20data-ogac%3D%22%22%20%0Adata-ogab%3D%22%
+ 22%20data-ogsc%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3
+ Eevent%3C%2Fspan%3E.%C2%A0%3C%2Fspan%3E%3C%2Fu%3E%3Cspan%0A%20style%3D%22fo
+ nt-size%3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%3E%3C%2F
+ span%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015
+ px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BS
+ egoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26q
+ uot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto
+ %2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3
+ A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A
+ %20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt
+ %3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20s
+ tyle%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B
+ %22%20%0Aclass%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C
+ %2Fdiv%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%
+ 20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West
+ %20European)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-s
+ ystem%2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelveti
+ ca%20%0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%2
+ 0rgb(36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%
+ 20255)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibr
+ i%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cb%3E%3Cu%3E%3Cspan%0A%20style%3D%2
+ 2font-size%3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0A
+ class%3D%22ContentPasted0%22%3EYou%20have%207%20days%20to%20%22Accept'%20or
+ %20%22Decline%22%20both%3Cspan%0A%20class%3D%22ContentPasted0%22%3E%C2%A0%3
+ C%2Fspan%3E%3Cspan%20data-markjs%3D%22true%22%20%0Aclass%3D%22markdwh5fg6gh
+ %20ContentPasted0%22%20data-ogac%3D%22%22%20data-ogab%3D%22%22%20%0Adata-og
+ sc%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3Einvitation%
+ 3C%2Fspan%3Es%2C%0A%20via%20the%3Cspan%20class%3D%22ContentPasted0%22%3E%C2
+ %A0%3C%2Fspan%3E%3Cspan%20data-markjs%3D%22true%22%20%0Aclass%3D%22markdwh5
+ fg6gh%20ContentPasted0%22%20data-ogac%3D%22%22%20data-ogab%3D%22%22%20%0Ada
+ ta-ogsc%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3Einvita
+ tion%3C%2Fspan%3E%3Cspan%20%0Aclass%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fsp
+ an%3Elink%20that%20is%20in%20the%20automated%0A%20email%20from%3Cspan%20cla
+ ss%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3Cspan%20data-markjs%3D%22t
+ rue%22%0A%20class%3D%22markamryng77i%20ContentPasted0%22%20data-ogac%3D%22%
+ 22%20data-ogab%3D%22%22%20%0Adata-ogsc%3D%22%22%20data-ogsb%3D%22%22%20styl
+ e%3D%22margin%3A0px%22%3Ee-COST%3C%2Fspan%3E.%3C%2Fspan%3E%3C%2Fu%3E%3C%2Fb
+ %3E%3Cb%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%
+ 3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3E%C2%A0%3C%2
+ Fspan%3E%3C%2Fb%3E%3Cspan%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%0
+ A%200px%3B%20color%3A%20black%3B%22%3E%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3
+ E%0A%0A%3Cdiv%20style%3D%22font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%
+ 2C%20%26quot%3BSegoe%20UI%20Web%20(West%20%0AEuropean)%26quot%3B%2C%20%26qu
+ ot%3BSegoe%20UI%26quot%3B%2C%20-apple-system%2C%20%0A%26quot%3Bsystem-ui%26
+ quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20Neue%26quot%3B%2C%20sans-ser
+ if%3B%20%0Amargin%3A%200px%3B%20background-color%3A%20rgb(255%2C%20255%2C%2
+ 0255)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A%2011pt%3B%20font-family%3A%
+ 20Calibri%2C%20sans-serif%3B%20margin%3A%20%0A0px%3B%20color%3A%20rgb(36%2C
+ %2036%2C%2036)%3B%22%3E%0A%3Cspan%20style%3D%22font-size%3A%2012pt%3B%20mar
+ gin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%
+ 3EIf%20no%20response%20is%20submitted%20in%3Cspan%20%0Aclass%3D%22ContentPa
+ sted0%22%3E%C2%A0%3C%2Fspan%3E%3Cspan%20data-markjs%3D%22true%22%20%0Aclass
+ %3D%22markamryng77i%20ContentPasted0%22%20data-ogac%3D%22%22%20data-ogab%3D
+ %22%22%20%0Adata-ogsc%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0
+ px%22%3Ee-COST%3C%2Fspan%3E%3Cspan%20%0Aclass%3D%22ContentPasted0%22%3E%C2%
+ A0%3C%2Fspan%3Eafter%0A%20that%20period%2C%20I'll%20delete%20your%3Cspan%20
+ class%3D%22ContentPasted0%22%3E%C2%A0%3C%2Fspan%3E%3Cspan%0A%20data-markjs%
+ 3D%22true%22%20class%3D%22markdwh5fg6gh%20ContentPasted0%22%20data-ogac%3D%
+ 22%22%20%0Adata-ogab%3D%22%22%20data-ogsc%3D%22%22%20data-ogsb%3D%22%22%20s
+ tyle%3D%22margin%3A0px%22%3Einvitation%3C%2Fspan%3E%3Cspan%0A%20class%3D%22
+ ContentPasted0%22%3E%C2%A0%3C%2Fspan%3Efrom%0A%20the%20system.%3C%2Fspan%3E
+ %3C%2Fp%3E%0A%3Cp%20style%3D%22font-size%3A%2011pt%3B%20font-family%3A%20Ca
+ libri%2C%20sans-serif%3B%20margin%3A%20%0A0px%3B%20color%3A%20rgb(36%2C%203
+ 6%2C%2036)%3B%22%3E%0A%3Cspan%20style%3D%22font-size%3A%2012pt%3B%20margin%
+ 3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3E%3
+ Cbr%3E%0A%3C%2Fspan%3E%3C%2Fp%3E%0A%3Cp%20style%3D%22font-size%3A%2011pt%3B
+ %20font-family%3A%20Calibri%2C%20sans-serif%3B%20margin%3A%20%0A0px%3B%20co
+ lor%3A%20rgb(36%2C%2036%2C%2036)%3B%22%3E%0A%3Cspan%20style%3D%22font-size%
+ 3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22
+ ContentPasted0%22%3E%3Cb%20style%3D%22font-size%3A%2012pt%3B%22%3EAlso%2C%2
+ 0the%20event%20will%20%0Abe%20broadcasted%20live%20via%20Zoom%20(info%20to%
+ 20join%20the%20event%20online%20is%20available%0A%20in%20the%20event%20Agen
+ da).%C2%A0%3C%2Fb%3E%3C%2Fspan%3E%3C%2Fp%3E%0A%3Cp%20style%3D%22font-size%3
+ A%2011pt%3B%20font-family%3A%20Calibri%2C%20sans-serif%3B%20margin%3A%20%0A
+ 0px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%22%3E%0A%3Cspan%20style%3D%2
+ 2font-size%3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0A
+ class%3D%22ContentPasted0%22%3E%3Cb%20style%3D%22font-size%3A%2012pt%3B%22%
+ 3EPlease%20let%20us%20know%20%0Aasap%20if%20you%20plan%20to%20attend%20the%
+ 20event%20face-to-face%20or%20online.%C2%A0%3C%2Fb%3E%3C%2Fspan%3E%3C%2Fp%3
+ E%0A%3Cp%20style%3D%22font-family%3A%20Calibri%2C%20sans-serif%3B%20margin%
+ 3A%200px%3B%22%3E%3Cfont%20%0Astyle%3D%22color%3A%20rgb(0%2C%200%2C%200)%3B
+ %22%3EIf%0A%20you%20attend%20the%20event%20online%2C%20please%20accept%20th
+ e%20invitations%2C%20let%20me%20know%0A%20and%20I'll%20change%20the%20eligi
+ bility%20status%20to%20non-eligible.%3C%2Ffont%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%
+ 0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26quot%
+ 3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20Europea
+ n)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%2
+ 0%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANe
+ ue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C
+ %2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%3B%
+ 22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20san
+ s-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%
+ 20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted
+ 0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%
+ 22font-size%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%
+ 2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%26qu
+ ot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui%26
+ quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sans-
+ serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20%0A
+ background-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style%3D
+ %22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%
+ 22%3E%3Cb%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200p
+ x%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%20ContentPaste
+ d2%22%3EIf%20you%20accept%20both%3Cspan%20%0Aclass%3D%22ContentPasted0%22%3
+ E%C2%A0%3C%2Fspan%3E%3Cspan%20data-markjs%3D%22true%22%20%0Aclass%3D%22mark
+ dwh5fg6gh%20ContentPasted0%22%20data-ogac%3D%22%22%20data-ogab%3D%22%22%20%
+ 0Adata-ogsc%3D%22%22%20data-ogsb%3D%22%22%20style%3D%22margin%3A0px%22%3Ein
+ vitation%3C%2Fspan%3Es%0A%20to%20attend%20the%20event%20face-to-face%2C%20p
+ lease%20arrange%20your%20travel%20plans%20as%20%0Asoon%20as%20possible%20an
+ d%20try%20to%C2%A0choose%20the%20most%20economical%20means%20of%20%0Atransp
+ ortation.%20in%20an%20effort%20to%20save%20Action%20resources.%3C%2Fspan%3E
+ %3C%2Fb%3E%3Cspan%20%0Astyle%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%
+ 3B%20color%3A%20black%3B%22%3E%3C%2Fspan%3E%3C%2Fp%3E%0A%3Cp%20style%3D%22f
+ ont-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%22%3
+ E%3Cb%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B
+ %20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%20ContentPasted1%2
+ 2%3EBe%20advised%20that%20the%20Action's%20%0AManagement%20Committee%20may%
+ 20decide%20to%20set%20a%C2%A0limit%20to%20the%20reimbursement%0A%20claims%2
+ 0of%20invited%20participants.%3C%2Fspan%3E%3C%2Fb%3E%3C%2Fp%3E%0A%3C%2Fdiv%
+ 3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26qu
+ ot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20Euro
+ pean)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2
+ C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0
+ ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36
+ %2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%
+ 3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20
+ sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%
+ 3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPas
+ ted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%
+ 3D%22font-size%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%
+ 3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%2
+ 6quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui
+ %26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sa
+ ns-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20
+ %0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style
+ %3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0
+ px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B
+ %20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3EDo%20not%20he
+ sitate%20to%20contact%C2%A0me%20if%20you%20need%20any%20%0Afurther%20clarif
+ ications%20or%20if%20you%20any%20queries.%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdi
+ v%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26
+ quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20Eu
+ ropean)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system
+ %2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20
+ %0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(
+ 36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255
+ )%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%
+ 20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012p
+ t%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentP
+ asted0%22%3E%C2%A0%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20styl
+ e%3D%22font-size%3A%2015px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quo
+ t%3B%2C%20%0A%26quot%3BSegoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20
+ %26quot%3BSegoe%20UI%26quot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-
+ ui%26quot%3B%2C%20Roboto%2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20
+ sans-serif%3B%20margin%3A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%
+ 20%0Abackground-color%3A%20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20sty
+ le%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3
+ A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A%200px%
+ 3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3ELooking%20f
+ orward%20to%20seeing%C2%A0you%20all%20face-to-face%20%0Aonce%20again.%3C%2F
+ span%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%22font-size%3A%2015
+ px%3B%20font-family%3A%20%26quot%3BSegoe%20UI%26quot%3B%2C%20%0A%26quot%3BS
+ egoe%20UI%20Web%20(West%20European)%26quot%3B%2C%20%26quot%3BSegoe%20UI%26q
+ uot%3B%2C%20%0A-apple-system%2C%20%26quot%3Bsystem-ui%26quot%3B%2C%20Roboto
+ %2C%20%26quot%3BHelvetica%20%0ANeue%26quot%3B%2C%20sans-serif%3B%20margin%3
+ A%200px%3B%20color%3A%20rgb(36%2C%2036%2C%2036)%3B%20%0Abackground-color%3A
+ %20rgb(255%2C%20255%2C%20255)%3B%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt
+ %3Bfont-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20s
+ tyle%3D%22font-size%3A%2012pt%3B%20color%3A%20black%3B%22%3E%C2%A0%3C%2Fspa
+ n%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%0A%0A%0A%3Cdiv%20style%3D%22margin%3A0p
+ x%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20s
+ ans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3
+ B%20margin%3A%200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPast
+ ed0%22%3EKind%20regards%2C%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdi
+ v%20style%3D%22margin%3A0px%22%3E%0A%3Cp%20style%3D%22font-size%3A11pt%3Bfo
+ nt-family%3ACalibri%2C%20sans-serif%3Bmargin%3A0px%22%3E%3Cspan%0A%20style%
+ 3D%22font-size%3A%2012pt%3B%20margin%3A%200px%3B%20color%3A%20black%3B%22%2
+ 0%0Aclass%3D%22ContentPasted0%22%3EMr.%20Eleftherios%20Meletis%3C%2Fspan%3E
+ %3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20style%3D%22margin%3A0px%22%3E%0A%3C
+ p%20style%3D%22font-size%3A11pt%3Bfont-family%3ACalibri%2C%20sans-serif%3Bm
+ argin%3A0px%22%3E%3Cspan%0A%20style%3D%22font-size%3A%2012pt%3B%20margin%3A
+ %200px%3B%20color%3A%20black%3B%22%20%0Aclass%3D%22ContentPasted0%22%3EGran
+ t%20Holder%20Manager%20of%20CA18208%3C%2Fspan%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0
+ A%0A%3C%2Fbody%3E":We are happy to invite you in our next face-to-face HARM
+ ONY event that will take\nplace in Nantes\, France 7 - 9 June 2023.\n\n \n\
+ nPlease read this email very carefully (reading time ~ 8 minutes).\n\n \n\n
+ The event has working group meetings/workshops as part of the morning sessi
+ on\nand training activities in the afternoon session (after the lunch break
+ ). The\nafternoon training activity will be delivered in parallel in two ro
+ oms - (I)\nRoom A: demonstration/discussion & (II) Room B: hands-on trainin
+ g (15 spots\navailable - allocation of spots will be made 20 days before th
+ e event and after\nthe participation list is locked). \n\n \n\nPlease find 
+ attached\, and read carefully too\, the event agenda that includes the\nsci
+ entific program and an accompanying document with instructions how to reach
+ \nthe Nantes and the meeting venue + accommodation recommendations + inform
+ ation\non the reimbursement scheme.\n\n \n\nYou have received two invitatio
+ ns from e-COST - 1 for the morning and 1 for the\nafternoon session. \n\nYo
+ u are considered eligible for reimbursement to attend the whole 3-day event
+ . \n\n \n\nYou have 7 days to "Accept' or "Decline" both invitations\, via\
+ nthe invitation link that is in the automated email from e-COST. \n\nIf no 
+ response is submitted in e-COST after that period\, I'll delete\nyour invit
+ ation from the system.\n\n\nAlso\, the event will be broadcasted live via Z
+ oom (info to join the event online\nis available in the event Agenda). \n\n
+ Please let us know asap if you plan to attend the event face-to-face or onl
+ ine. \n\nIf you attend the event online\, please accept the invitations\, l
+ et me know and\nI'll change the eligibility status to non-eligible.\n\n \n\
+ nIf you accept both invitations to attend the event face-to-face\, please a
+ rrange\nyour travel plans as soon as possible and try to choose the most ec
+ onomical\nmeans of transportation. in an effort to save Action resources.\n
+ \nBe advised that the Action's Management Committee may decide to set a lim
+ it to\nthe reimbursement claims of invited participants.\n\n \n\nDo not hes
+ itate to contact me if you need any further clarifications or if you\nany q
+ ueries.\n\n \n\nLooking forward to seeing you all face-to-face once again.\
+ n\n \n\nKind regards\,\n\nMr. Eleftherios Meletis\n\nGrant Holder Manager o
+ f CA18208\n
+END:VEVENT
+END:VCALENDAR
+
