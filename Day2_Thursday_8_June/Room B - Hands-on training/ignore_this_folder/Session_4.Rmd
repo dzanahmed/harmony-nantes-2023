@@ -12,10 +12,10 @@ header-includes:
 params:
   presentation: TRUE
 output:
+  html_document: default
   beamer_presentation:
       pandoc_args: ["-t", "beamer"]
       slide_level: 2
-  html_document: default
 ---
 
 ```{r setup, include=FALSE}

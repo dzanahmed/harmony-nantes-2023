@@ -3,12 +3,12 @@ title: "Session 1"
 author: "Matt Denwood and Eleftherios Meletis"
 date: '2023-06-07'
 output:
+  html_document: default
   beamer_presentation:
     pandoc_args:
     - -t
     - beamer
     slide_level: 2
-  html_document: default
   ioslides_presentation: default
   slidy_presentation: default
 theme: metropolis
@@ -299,7 +299,7 @@ are automated hooks that are only used by runjags
 
 Compared to our Metropolis algorithm, this JAGS model is:
 
-  * Eaiser to write and understand
+  * Easier to write and understand
   * More efficient (lower autocorrelation)
   * Faster to run
 
