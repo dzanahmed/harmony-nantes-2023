@@ -5,5 +5,6 @@ Day 1 - Wednesday 7 June 2023
 
 Hands-on training session
 
-Session 1 - An introduction to JAGS \n 
+Session 1 - An introduction to JAGS
+
 Session 2 - Introduction to Hui-Walter models
