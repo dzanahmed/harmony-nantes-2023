@@ -1,7 +1,7 @@
 # HARMONY_Berlin_event
 Training material for the CA18208 HARMONY 3-day event in Berlin, Germany
 
-Day 2 - Thursday 7 June 2023
+Day 2 - Thursday 8 June 2023
 
 Hands-on training session
 
