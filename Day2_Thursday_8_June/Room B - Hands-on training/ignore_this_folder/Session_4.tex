@@ -1,0 +1,1441 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{metropolis}
+\usecolortheme{seahorse}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Session 4},
+  pdfauthor={Matt Denwood, Giles Innocent},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\input{preamble}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Session 4}
+\subtitle{Multi-test, multi-population models}
+\author{Matt Denwood, Giles Innocent}
+\date{2023-06-08}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Why stop at two tests?}
+\protect\hypertarget{why-stop-at-two-tests}{}
+In \emph{traditional} diagnostic test evaluation, one test is assumed to
+be a gold standard from which all other tests are evaluated
+
+\begin{itemize}
+\tightlist
+\item
+  So it makes no difference if you assess one test at a time or do
+  multiple tests at the same time
+\end{itemize}
+
+\pause
+
+Using a latent class model each new test adds new information - so we
+should analyse all available test results in the same model
+\end{frame}
+
+\begin{frame}[fragile]{Simulating data: simple example}
+\protect\hypertarget{simulating-data-simple-example}{}
+Simulating data using an arbitrary number of independent tests is quite
+straightforward:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Parameter values to simulate:}
+\NormalTok{N }\OtherTok{\textless{}{-}} \DecValTok{200}
+\NormalTok{sensitivity }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.8}\NormalTok{, }\FloatTok{0.9}\NormalTok{, }\FloatTok{0.95}\NormalTok{)}
+\NormalTok{specificity }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.95}\NormalTok{, }\FloatTok{0.99}\NormalTok{, }\FloatTok{0.95}\NormalTok{)}
+
+\NormalTok{Populations }\OtherTok{\textless{}{-}} \DecValTok{2}
+\NormalTok{prevalence }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.25}\NormalTok{,}\FloatTok{0.5}\NormalTok{)}
+
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}\AttributeTok{Population =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{seq\_len}\NormalTok{(Populations), N, }\AttributeTok{replace=}\ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Status =} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, prevalence[Population])) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Test1 =} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, sensitivity[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{Status }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{specificity[}\DecValTok{1}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{Status))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Test2 =} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, sensitivity[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{Status }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{specificity[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{Status))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Test3 =} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, sensitivity[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{*}\NormalTok{Status }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{specificity[}\DecValTok{3}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{Status))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{Status)}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]{Model specification}
+\protect\hypertarget{model-specification}{}
+Like for two tests, except it is now a 2x2x2 table
+
+\pause
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Tally[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{8}\NormalTok{,p] }\SpecialCharTok{\textasciitilde{}} \FunctionTok{dmulti}\NormalTok{(prob[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{8}\NormalTok{,p], TotalTests[p])}
+
+\CommentTok{\# Probability of observing Test1{-} Test2{-} Test3{-}}
+\NormalTok{prob[}\DecValTok{1}\NormalTok{,p] }\OtherTok{\textless{}{-}}\NormalTok{  prev[p] }\SpecialCharTok{*}\NormalTok{ ((}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{1}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{3}\NormalTok{]) }\SpecialCharTok{+}
+\NormalTok{              (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{prev[p]) }\SpecialCharTok{*}\NormalTok{ (sp[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{3}\NormalTok{])}
+
+\CommentTok{\# Probability of observing Test1+ Test2{-} Test3{-}}
+\NormalTok{prob[}\DecValTok{2}\NormalTok{,p] }\OtherTok{\textless{}{-}}\NormalTok{  prev[p] }\SpecialCharTok{*}\NormalTok{ (se[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{3}\NormalTok{])) }\SpecialCharTok{+}
+\NormalTok{              (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{prev[p]) }\SpecialCharTok{*}\NormalTok{ ((}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{sp[}\DecValTok{1}\NormalTok{])}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{3}\NormalTok{])}
+
+\DocumentationTok{\#\# snip \#\#}
+
+\CommentTok{\# Probability of observing Test1+ Test2+ Test3+}
+\NormalTok{prob[}\DecValTok{3}\NormalTok{,p] }\OtherTok{\textless{}{-}}\NormalTok{  prev[p] }\SpecialCharTok{*}\NormalTok{ (se[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{se[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{se[}\DecValTok{3}\NormalTok{]) }\SpecialCharTok{+}
+\NormalTok{              (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{prev[p]) }\SpecialCharTok{*}\NormalTok{ ((}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{sp[}\DecValTok{1}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{sp[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{sp[}\DecValTok{3}\NormalTok{]))}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  We need to take \textbf{extreme} care with these equations, and the
+  multinomial tabulation!!!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Are the tests conditionally independent?}
+\protect\hypertarget{are-the-tests-conditionally-independent}{}
+\begin{itemize}
+\item
+  Example: we have one blood, one milk, and one faecal test
+
+  \begin{itemize}
+  \tightlist
+  \item
+    But the blood and milk test are basically the same test
+  \item
+    Therefore they are more likely to give the same result
+  \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\item
+  Example: we test people for COVID using an antigen test on a nasal
+  swab, a PCR test on a throat swab, and the same antigen test on the
+  same throat swab
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The virus may be present in the throat, nose, neither, or both
+  \item
+    But we use the same antigen test twice
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Might it cross-react with the same non-target virus?
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  In both situations we have pairwise correlation between some of the
+  tests
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Directed Acyclic Graphs}
+\protect\hypertarget{directed-acyclic-graphs}{}
+\begin{itemize}
+\tightlist
+\item
+  It may help you to visualise the relationships as a DAG:
+\end{itemize}
+
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-4-1.pdf}
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]{Dealing with correlation: Covid example}
+\protect\hypertarget{dealing-with-correlation-covid-example}{}
+It helps to consider the data simulation as a (simplified) biological
+process (where my parameters are not representative of real life!):
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# The probability of infection with COVID in two populations:}
+\NormalTok{prevalence }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.01}\NormalTok{,}\FloatTok{0.05}\NormalTok{)}
+\CommentTok{\# The probability of shedding COVID in the nose conditional on infection:}
+\NormalTok{nose\_shedding }\OtherTok{\textless{}{-}} \FloatTok{0.8}
+\CommentTok{\# The probability of shedding COVID in the throat conditional on infection:}
+\NormalTok{throat\_shedding }\OtherTok{\textless{}{-}} \FloatTok{0.8}
+\CommentTok{\# The probability of detecting virus with the antigen test:}
+\NormalTok{antigen\_detection }\OtherTok{\textless{}{-}} \FloatTok{0.75}
+\CommentTok{\# The probability of detecting virus with the PCR test:}
+\NormalTok{pcr\_detection }\OtherTok{\textless{}{-}} \FloatTok{0.999}
+\CommentTok{\# The probability of random cross{-}reaction with the antigen test:}
+\NormalTok{antigen\_crossreact }\OtherTok{\textless{}{-}} \FloatTok{0.05}
+\CommentTok{\# The probability of random cross{-}reaction with the PCR test:}
+\NormalTok{pcr\_crossreact }\OtherTok{\textless{}{-}} \FloatTok{0.01}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+
+\pause
+
+Note: cross-reactions are assumed to be independent here!
+\end{frame}
+
+\begin{frame}[fragile]
+Simulating latent states:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{N }\OtherTok{\textless{}{-}} \DecValTok{20000}
+\NormalTok{Populations }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(prevalence)}
+
+\NormalTok{covid\_data }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}\AttributeTok{Population =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{seq\_len}\NormalTok{(Populations), N, }\AttributeTok{replace=}\ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \DocumentationTok{\#\# True infection status:}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Status =} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, prevalence[Population])) }\SpecialCharTok{\%\textgreater{}\%}
+  \DocumentationTok{\#\# Nose shedding status:}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Nose =}\NormalTok{ Status }\SpecialCharTok{*} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, nose\_shedding)) }\SpecialCharTok{\%\textgreater{}\%}
+  \DocumentationTok{\#\# Throat shedding status:}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Throat =}\NormalTok{ Status }\SpecialCharTok{*} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, throat\_shedding))}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+Simulating test results:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{covid\_data }\OtherTok{\textless{}{-}}\NormalTok{ covid\_data }\SpecialCharTok{\%\textgreater{}\%}
+  \DocumentationTok{\#\# The nose swab antigen test may be false or true positive:}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{NoseAG =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    Nose }\SpecialCharTok{==} \DecValTok{1} \SpecialCharTok{\textasciitilde{}} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, antigen\_detection),}
+\NormalTok{    Nose }\SpecialCharTok{==} \DecValTok{0} \SpecialCharTok{\textasciitilde{}} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, antigen\_crossreact)}
+\NormalTok{  )) }\SpecialCharTok{\%\textgreater{}\%}
+  \DocumentationTok{\#\# The throat swab antigen test may be false or true positive:}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{ThroatAG =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    Throat }\SpecialCharTok{==} \DecValTok{1} \SpecialCharTok{\textasciitilde{}} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, antigen\_detection),}
+\NormalTok{    Throat }\SpecialCharTok{==} \DecValTok{0} \SpecialCharTok{\textasciitilde{}} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, antigen\_crossreact)}
+\NormalTok{  )) }\SpecialCharTok{\%\textgreater{}\%}
+  \DocumentationTok{\#\# The PCR test may be false or true positive:}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{ThroatPCR =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    Throat }\SpecialCharTok{==} \DecValTok{1} \SpecialCharTok{\textasciitilde{}} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, pcr\_detection),}
+\NormalTok{    Throat }\SpecialCharTok{==} \DecValTok{0} \SpecialCharTok{\textasciitilde{}} \FunctionTok{rbinom}\NormalTok{(N, }\DecValTok{1}\NormalTok{, pcr\_crossreact)}
+\NormalTok{  ))}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+The overall sensitivity of the tests can be calculated as follows:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{covid\_sensitivity }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}
+  \CommentTok{\# Nose antigen:}
+\NormalTok{  nose\_shedding}\SpecialCharTok{*}\NormalTok{antigen\_detection }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{nose\_shedding)}\SpecialCharTok{*}\NormalTok{antigen\_crossreact,}
+  \CommentTok{\# Throat antigen:}
+\NormalTok{  throat\_shedding}\SpecialCharTok{*}\NormalTok{antigen\_detection }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{throat\_shedding)}\SpecialCharTok{*}\NormalTok{antigen\_crossreact,}
+  \CommentTok{\# Throat PCR:}
+\NormalTok{  throat\_shedding}\SpecialCharTok{*}\NormalTok{pcr\_detection }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{throat\_shedding)}\SpecialCharTok{*}\NormalTok{pcr\_crossreact}
+\NormalTok{)}
+\NormalTok{covid\_sensitivity}
+\DocumentationTok{\#\# [1] 0.6100 0.6100 0.8012}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+The overall specificity of the tests is more straightforward:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{covid\_specificity }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}
+  \CommentTok{\# Nose antigen:}
+  \DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ antigen\_crossreact,}
+  \CommentTok{\# Throat antigen:}
+  \DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ antigen\_crossreact,}
+  \CommentTok{\# Throat PCR:}
+  \DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ pcr\_crossreact}
+\NormalTok{)}
+\NormalTok{covid\_specificity}
+\DocumentationTok{\#\# [1] 0.95 0.95 0.99}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+
+\pause
+
+However: this assumes that cross-reactions are independent!
+\end{frame}
+
+\begin{frame}[fragile]{Model specification}
+\protect\hypertarget{model-specification-1}{}
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{prob[}\DecValTok{1}\NormalTok{,p] }\OtherTok{\textless{}{-}}\NormalTok{  prev[p] }\SpecialCharTok{*}\NormalTok{ ((}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{1}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{3}\NormalTok{]) }
+                         \SpecialCharTok{+}\NormalTok{covse12 }\SpecialCharTok{+}\NormalTok{covse13 }\SpecialCharTok{+}\NormalTok{covse23) }\SpecialCharTok{+}
+\NormalTok{              (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{prev[p]) }\SpecialCharTok{*}\NormalTok{ (sp[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{3}\NormalTok{] }
+                             \SpecialCharTok{+}\NormalTok{covsp12 }\SpecialCharTok{+}\NormalTok{covsp13 }\SpecialCharTok{+}\NormalTok{covsp23)}
+
+\NormalTok{prob[}\DecValTok{2}\NormalTok{,p] }\OtherTok{\textless{}{-}}\NormalTok{ prev[p] }\SpecialCharTok{*}\NormalTok{ (se[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{3}\NormalTok{]) }
+                           \SpecialCharTok{{-}}\NormalTok{covse12 }\SpecialCharTok{{-}}\NormalTok{covse13 }\SpecialCharTok{+}\NormalTok{covse23) }\SpecialCharTok{+}
+\NormalTok{               (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{prev[p]) }\SpecialCharTok{*}\NormalTok{ ((}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{sp[}\DecValTok{1}\NormalTok{])}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{3}\NormalTok{] }
+                              \SpecialCharTok{{-}}\NormalTok{covsp12 }\SpecialCharTok{{-}}\NormalTok{covsp13 }\SpecialCharTok{+}\NormalTok{covsp23)}
+
+\DocumentationTok{\#\# snip \#\#}
+        
+\CommentTok{\# Covariance in sensitivity between tests 1 and 2:}
+\NormalTok{covse12 }\SpecialCharTok{\textasciitilde{}} \FunctionTok{dunif}\NormalTok{( (se[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{se[}\DecValTok{2}\NormalTok{]) , }
+                     \FunctionTok{min}\NormalTok{(se[}\DecValTok{1}\NormalTok{],se[}\DecValTok{2}\NormalTok{]) }\SpecialCharTok{{-}}\NormalTok{ se[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{se[}\DecValTok{2}\NormalTok{] )}
+\CommentTok{\# Covariance in specificity between tests 1 and 2:}
+\NormalTok{covsp12 }\SpecialCharTok{\textasciitilde{}} \FunctionTok{dunif}\NormalTok{( (sp[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{sp[}\DecValTok{2}\NormalTok{]) , }
+                     \FunctionTok{min}\NormalTok{(sp[}\DecValTok{1}\NormalTok{],sp[}\DecValTok{2}\NormalTok{]) }\SpecialCharTok{{-}}\NormalTok{ sp[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{sp[}\DecValTok{2}\NormalTok{] )}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+
+\pause
+
+It is quite easy to get the terms slightly wrong!
+\end{frame}
+
+\begin{frame}[fragile]{Template Hui-Walter}
+\protect\hypertarget{template-hui-walter}{}
+The model code and data format for an arbitrary number of populations
+(and tests) can be determined automatically using the
+template\_huiwalter function from the runjags package:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{template\_huiwalter}\NormalTok{(}
+\NormalTok{  covid\_data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(Population, NoseAG, ThroatAG, ThroatPCR), }
+  \AttributeTok{outfile =} \StringTok{\textquotesingle{}covidmodel.txt\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+
+This generates self-contained model/data/initial values etc
+\end{frame}
+
+\begin{frame}[fragile]
+\scriptsize
+
+\begin{verbatim}
+model{
+
+    ## Observation layer:
+
+    # Complete observations (N=20000):
+    for(p in 1:Populations){
+        Tally_RRR[1:8,p] ~ dmulti(prob_RRR[1:8,p], N_RRR[p])
+
+        prob_RRR[1:8,p] <- se_prob[1:8,p] + sp_prob[1:8,p]
+    }
+
+
+    ## Observation probabilities:
+
+    for(p in 1:Populations){
+
+        # Probability of observing NoseAG- ThroatAG- ThroatPCR- from a true positive::
+        se_prob[1,p] <- prev[p] * ((1-se[1])*(1-se[2])*(1-se[3]) +covse12 +covse13 +covse23)
+        # Probability of observing NoseAG- ThroatAG- ThroatPCR- from a true negative::
+        sp_prob[1,p] <- (1-prev[p]) * (sp[1]*sp[2]*sp[3] +covsp12 +covsp13 +covsp23)
+
+        # Probability of observing NoseAG+ ThroatAG- ThroatPCR- from a true positive::
+        se_prob[2,p] <- prev[p] * (se[1]*(1-se[2])*(1-se[3]) -covse12 -covse13 +covse23)
+        # Probability of observing NoseAG+ ThroatAG- ThroatPCR- from a true negative::
+        sp_prob[2,p] <- (1-prev[p]) * ((1-sp[1])*sp[2]*sp[3] -covsp12 -covsp13 +covsp23)
+
+        # Probability of observing NoseAG- ThroatAG+ ThroatPCR- from a true positive::
+        se_prob[3,p] <- prev[p] * ((1-se[1])*se[2]*(1-se[3]) -covse12 +covse13 -covse23)
+        # Probability of observing NoseAG- ThroatAG+ ThroatPCR- from a true negative::
+        sp_prob[3,p] <- (1-prev[p]) * (sp[1]*(1-sp[2])*sp[3] -covsp12 +covsp13 -covsp23)
+
+        # Probability of observing NoseAG+ ThroatAG+ ThroatPCR- from a true positive::
+        se_prob[4,p] <- prev[p] * (se[1]*se[2]*(1-se[3]) +covse12 -covse13 -covse23)
+        # Probability of observing NoseAG+ ThroatAG+ ThroatPCR- from a true negative::
+        sp_prob[4,p] <- (1-prev[p]) * ((1-sp[1])*(1-sp[2])*sp[3] +covsp12 -covsp13 -covsp23)
+
+        # Probability of observing NoseAG- ThroatAG- ThroatPCR+ from a true positive::
+        se_prob[5,p] <- prev[p] * ((1-se[1])*(1-se[2])*se[3] +covse12 -covse13 -covse23)
+        # Probability of observing NoseAG- ThroatAG- ThroatPCR+ from a true negative::
+        sp_prob[5,p] <- (1-prev[p]) * (sp[1]*sp[2]*(1-sp[3]) +covsp12 -covsp13 -covsp23)
+
+        # Probability of observing NoseAG+ ThroatAG- ThroatPCR+ from a true positive::
+        se_prob[6,p] <- prev[p] * (se[1]*(1-se[2])*se[3] -covse12 +covse13 -covse23)
+        # Probability of observing NoseAG+ ThroatAG- ThroatPCR+ from a true negative::
+        sp_prob[6,p] <- (1-prev[p]) * ((1-sp[1])*sp[2]*(1-sp[3]) -covsp12 +covsp13 -covsp23)
+
+        # Probability of observing NoseAG- ThroatAG+ ThroatPCR+ from a true positive::
+        se_prob[7,p] <- prev[p] * ((1-se[1])*se[2]*se[3] -covse12 -covse13 +covse23)
+        # Probability of observing NoseAG- ThroatAG+ ThroatPCR+ from a true negative::
+        sp_prob[7,p] <- (1-prev[p]) * (sp[1]*(1-sp[2])*(1-sp[3]) -covsp12 -covsp13 +covsp23)
+
+        # Probability of observing NoseAG+ ThroatAG+ ThroatPCR+ from a true positive::
+        se_prob[8,p] <- prev[p] * (se[1]*se[2]*se[3] +covse12 +covse13 +covse23)
+        # Probability of observing NoseAG+ ThroatAG+ ThroatPCR+ from a true negative::
+        sp_prob[8,p] <- (1-prev[p]) * ((1-sp[1])*(1-sp[2])*(1-sp[3]) +covsp12 +covsp13 +covsp23)
+
+    }
+
+
+    ## Priors:
+
+    # Prevalence in population 1:
+    prev[1] ~ dbeta(1,1)
+
+    # Prevalence in population 2:
+    prev[2] ~ dbeta(1,1)
+
+
+    # Sensitivity of NoseAG test:
+    se[1] ~ dbeta(1,1)T(1-sp[1], )
+    # Specificity of NoseAG test:
+    sp[1] ~ dbeta(1,1)
+
+    # Sensitivity of ThroatAG test:
+    se[2] ~ dbeta(1,1)T(1-sp[2], )
+    # Specificity of ThroatAG test:
+    sp[2] ~ dbeta(1,1)
+
+    # Sensitivity of ThroatPCR test:
+    se[3] ~ dbeta(1,1)T(1-sp[3], )
+    # Specificity of ThroatPCR test:
+    sp[3] ~ dbeta(1,1)
+
+
+    # Covariance in sensitivity between NoseAG and ThroatAG tests:
+    # covse12 ~ dunif( (se[1]-1)*(1-se[2]) , min(se[1],se[2]) - se[1]*se[2] )  ## if the sensitivity of these tests may be correlated
+    covse12 <- 0  ## if the sensitivity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corse12 <- ifelse(covse12 < 0, -covse12 / ((se[1]-1)*(1-se[2])), covse12 / (min(se[1],se[2]) - se[1]*se[2]))
+
+    # Covariance in specificity between NoseAG and ThroatAG tests:
+    # covsp12 ~ dunif( (sp[1]-1)*(1-sp[2]) , min(sp[1],sp[2]) - sp[1]*sp[2] )  ## if the specificity of these tests may be correlated
+    covsp12 <- 0  ## if the specificity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corsp12 <- ifelse(covsp12 < 0, -covsp12 / ((sp[1]-1)*(1-sp[2])), covsp12 / (min(sp[1],sp[2]) - sp[1]*sp[2]))
+
+    # Covariance in sensitivity between NoseAG and ThroatPCR tests:
+    # covse13 ~ dunif( (se[1]-1)*(1-se[3]) , min(se[1],se[3]) - se[1]*se[3] )  ## if the sensitivity of these tests may be correlated
+    covse13 <- 0  ## if the sensitivity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corse13 <- ifelse(covse13 < 0, -covse13 / ((se[1]-1)*(1-se[3])), covse13 / (min(se[1],se[3]) - se[1]*se[3]))
+
+    # Covariance in specificity between NoseAG and ThroatPCR tests:
+    # covsp13 ~ dunif( (sp[1]-1)*(1-sp[3]) , min(sp[1],sp[3]) - sp[1]*sp[3] )  ## if the specificity of these tests may be correlated
+    covsp13 <- 0  ## if the specificity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corsp13 <- ifelse(covsp13 < 0, -covsp13 / ((sp[1]-1)*(1-sp[3])), covsp13 / (min(sp[1],sp[3]) - sp[1]*sp[3]))
+
+    # Covariance in sensitivity between ThroatAG and ThroatPCR tests:
+    # covse23 ~ dunif( (se[2]-1)*(1-se[3]) , min(se[2],se[3]) - se[2]*se[3] )  ## if the sensitivity of these tests may be correlated
+    covse23 <- 0  ## if the sensitivity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corse23 <- ifelse(covse23 < 0, -covse23 / ((se[2]-1)*(1-se[3])), covse23 / (min(se[2],se[3]) - se[2]*se[3]))
+
+    # Covariance in specificity between ThroatAG and ThroatPCR tests:
+    # covsp23 ~ dunif( (sp[2]-1)*(1-sp[3]) , min(sp[2],sp[3]) - sp[2]*sp[3] )  ## if the specificity of these tests may be correlated
+    covsp23 <- 0  ## if the specificity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corsp23 <- ifelse(covsp23 < 0, -covsp23 / ((sp[2]-1)*(1-sp[3])), covsp23 / (min(sp[2],sp[3]) - sp[2]*sp[3]))
+
+}
+
+#monitor# se, sp, prev, covse12, corse12, covsp12, corsp12, covse13, corse13, covsp13, corsp13, covse23, corse23, covsp23, corsp23
+
+## Inits:
+inits{
+"se" <- c(0.5, 0.99, 0.5)
+"sp" <- c(0.99, 0.75, 0.99)
+"prev" <- c(0.05, 0.95)
+# "covse12" <- 0
+# "covse13" <- 0
+# "covse23" <- 0
+# "covsp12" <- 0
+# "covsp13" <- 0
+# "covsp23" <- 0
+}
+inits{
+"se" <- c(0.99, 0.5, 0.99)
+"sp" <- c(0.75, 0.99, 0.75)
+"prev" <- c(0.95, 0.05)
+# "covse12" <- 0
+# "covse13" <- 0
+# "covse23" <- 0
+# "covsp12" <- 0
+# "covsp13" <- 0
+# "covsp23" <- 0
+}
+\end{verbatim}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+\scriptsize
+
+\begin{verbatim}
+## Data:
+data{
+"Populations" <- 2
+"N_RRR" <- c(9934, 10066)
+"Tally_RRR" <- structure(c(8795, 466, 496, 18, 89, 17, 20, 33, 8579, 507, 432, 25, 132, 74, 124, 193), .Dim = c(8, 2))
+}
+\end{verbatim}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+And can be run directly from R:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{run.jags}\NormalTok{(}\StringTok{\textquotesingle{}covidmodel.txt\textquotesingle{}}\NormalTok{)}
+\DocumentationTok{\#\# Loading required namespace: rjags}
+\NormalTok{results}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+
+\scriptsize
+
+\begin{longtable}[]{@{}lrrrrr@{}}
+\toprule
+& Lower95 & Median & Upper95 & SSeff & psrf \\
+\midrule
+\endhead
+se{[}1{]} & 0.566 & 0.618 & 0.667 & 8066 & 1 \\
+se{[}2{]} & 0.675 & 0.727 & 0.777 & 7315 & 1 \\
+se{[}3{]} & 0.947 & 0.984 & 1.000 & 5753 & 1 \\
+sp{[}1{]} & 0.944 & 0.948 & 0.951 & 12097 & 1 \\
+sp{[}2{]} & 0.947 & 0.950 & 0.953 & 11969 & 1 \\
+sp{[}3{]} & 0.989 & 0.990 & 0.992 & 7284 & 1 \\
+prev{[}1{]} & 0.005 & 0.007 & 0.009 & 9462 & 1 \\
+prev{[}2{]} & 0.039 & 0.043 & 0.048 & 7639 & 1 \\
+covse12 & 0.000 & 0.000 & 0.000 & NA & NA \\
+covsp12 & 0.000 & 0.000 & 0.000 & NA & NA \\
+covse13 & 0.000 & 0.000 & 0.000 & NA & NA \\
+covsp13 & 0.000 & 0.000 & 0.000 & NA & NA \\
+covse23 & 0.000 & 0.000 & 0.000 & NA & NA \\
+covsp23 & 0.000 & 0.000 & 0.000 & NA & NA \\
+\bottomrule
+\end{longtable}
+
+\normalsize
+\end{frame}
+
+\begin{frame}{Template Hui-Walter}
+\protect\hypertarget{template-hui-walter-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Modifying priors must still be done directly in the model file
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Same for adding .RNG.seed and the deviance monitor
+  \end{itemize}
+\item
+  The model needs to be re-generated if the data changes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    But remember that your modified priors will be reset
+  \end{itemize}
+\item
+  There must be a single column for the population (as a factor), and
+  all of the other columns (either factor, logical or numeric) are
+  interpreted as being test results
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{itemize}
+\tightlist
+\item
+  Covariance terms are also calculated as proportion of possible
+  correlation e.g.:
+\end{itemize}
+
+\scriptsize
+
+\begin{verbatim}
+    # Covariance in sensitivity between NoseAG and ThroatAG tests:
+    # covse12 ~ dunif( (se[1]-1)*(1-se[2]) , min(se[1],se[2]) - se[1]*se[2] )  ## if the sensitivity of these tests may be correlated
+    covse12 <- 0  ## if the sensitivity of these tests can be assumed to be independent
+    # Calculated relative to the min/max for ease of interpretation:
+    corse12 <- ifelse(covse12 < 0, -covse12 / ((se[1]-1)*(1-se[2])), covse12 / (min(se[1],se[2]) - se[1]*se[2]))
+\end{verbatim}
+
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  But covariance terms are all deactivated by default!
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Activating covariance terms}
+\protect\hypertarget{activating-covariance-terms}{}
+Find the lines for the covariances that we want to activate (i.e.~the
+two Throat tests):
+
+\scriptsize
+
+\begin{verbatim}
+# Covariance in sensitivity between ThroatAG and ThroatPCR tests:
+# covse23 ~ dunif( (se[2]-1)*(1-se[3]) , min(se[2],se[3]) - se[2]*se[3] )  ## if the sensitivity of these tests may be correlated
+covse23 <- 0  ## if the sensitivity of these tests can be assumed to be independent
+
+# Covariance in specificity between ThroatAG and ThroatPCR tests:
+# covsp23 ~ dunif( (sp[2]-1)*(1-sp[3]) , min(sp[2],sp[3]) - sp[2]*sp[3] )  ## if the specificity of these tests may be correlated
+covsp23 <- 0  ## if the specificity of these tests can be assumed to be independent
+\end{verbatim}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+And edit so it looks like:
+
+\scriptsize
+
+\begin{verbatim}
+# Covariance in sensitivity between ThroatAG and ThroatPCR tests:
+covse23 ~ dunif( (se[2]-1)*(1-se[3]) , min(se[2],se[3]) - se[2]*se[3] )  ## if the sensitivity of these tests may be correlated
+ # covse23 <- 0  ## if the sensitivity of these tests can be assumed to be independent
+
+# Covariance in specificity between ThroatAG and ThroatPCR tests:
+covsp23 ~ dunif( (sp[2]-1)*(1-sp[3]) , min(sp[2],sp[3]) - sp[2]*sp[3] )  ## if the specificity of these tests may be correlated
+ # covsp23 <- 0  ## if the specificity of these tests can be assumed to be independent
+\end{verbatim}
+
+\normalsize
+
+{[}i.e.~swap the comments around{]}
+\end{frame}
+
+\begin{frame}[fragile]
+You will also need to uncomment out the relevant initial values for BOTH
+chains (on lines 132-137 and 128-133):
+
+\scriptsize
+
+\begin{verbatim}
+# "covse12" <- 0
+# "covse13" <- 0
+# "covse23" <- 0
+# "covsp12" <- 0
+# "covsp13" <- 0
+# "covsp23" <- 0
+\end{verbatim}
+
+\normalsize
+
+So that they look like:
+
+\scriptsize
+
+\begin{verbatim}
+# "covse12" <- 0
+# "covse13" <- 0
+"covse23" <- 0
+# "covsp12" <- 0
+# "covsp13" <- 0
+"covsp23" <- 0
+\end{verbatim}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{run.jags}\NormalTok{(}\StringTok{\textquotesingle{}covidmodel.txt\textquotesingle{}}\NormalTok{, }\AttributeTok{sample=}\DecValTok{50000}\NormalTok{)}
+\NormalTok{results}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# JAGS model summary statistics from 100000 samples (chains = 2; adapt+burnin = 5000):}
+\DocumentationTok{\#\#                                                    }
+\DocumentationTok{\#\#             Lower95     Median   Upper95       Mean}
+\DocumentationTok{\#\# se[1]       0.57198     0.6294   0.69021    0.62997}
+\DocumentationTok{\#\# se[2]       0.51661    0.64656   0.74942    0.64132}
+\DocumentationTok{\#\# se[3]       0.75314    0.90369   0.99988    0.89199}
+\DocumentationTok{\#\# sp[1]       0.94512     0.9491   0.95352     0.9492}
+\DocumentationTok{\#\# sp[2]       0.94547    0.94893   0.95222    0.94892}
+\DocumentationTok{\#\# sp[3]       0.98751    0.98982   0.99188    0.98979}
+\DocumentationTok{\#\# prev[1]   0.0051554  0.0074509 0.0099621  0.0075418}
+\DocumentationTok{\#\# prev[2]    0.039464   0.046485  0.056292   0.047096}
+\DocumentationTok{\#\# covse12           0          0         0          0}
+\DocumentationTok{\#\# corse12           0          0         0          0}
+\DocumentationTok{\#\# covsp12           0          0         0          0}
+\DocumentationTok{\#\# corsp12           0          0         0          0}
+\DocumentationTok{\#\# covse13           0          0         0          0}
+\DocumentationTok{\#\# corse13           0          0         0          0}
+\DocumentationTok{\#\# covsp13           0          0         0          0}
+\DocumentationTok{\#\# corsp13           0          0         0          0}
+\DocumentationTok{\#\# covse23   {-}0.002916   0.037526  0.082893   0.037966}
+\DocumentationTok{\#\# corse23    0.038044    0.58508   0.99981    0.54166}
+\DocumentationTok{\#\# covsp23 {-}0.00040251 0.00014916 0.0006603 0.00015001}
+\DocumentationTok{\#\# corsp23    {-}0.63667   0.015469  0.096478  {-}0.081841}
+\DocumentationTok{\#\#                                                            }
+\DocumentationTok{\#\#                 SD Mode       MCerr MC\%ofSD SSeff     AC.10}
+\DocumentationTok{\#\# se[1]     0.030152   {-}{-}  0.00026011     0.9 13438  0.043258}
+\DocumentationTok{\#\# se[2]     0.062453   {-}{-}   0.0015953     2.6  1532   0.65695}
+\DocumentationTok{\#\# se[3]     0.075298   {-}{-}   0.0020301     2.7  1376   0.75259}
+\DocumentationTok{\#\# sp[1]    0.0021585   {-}{-} 0.000040841     1.9  2793   0.34949}
+\DocumentationTok{\#\# sp[2]    0.0017175   {-}{-} 0.000015602     0.9 12118  0.040657}
+\DocumentationTok{\#\# sp[3]     0.001108   {-}{-} 0.000012828     1.2  7461  0.095005}
+\DocumentationTok{\#\# prev[1]  0.0012417   {-}{-} 0.000017085     1.4  5282   0.17045}
+\DocumentationTok{\#\# prev[2]  0.0044475   {-}{-} 0.000098782     2.2  2027   0.51393}
+\DocumentationTok{\#\# covse12          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# corse12          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# covsp12          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# corsp12          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# covse13          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# corse13          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# covsp13          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# corsp13          0    0          {-}{-}      {-}{-}    {-}{-}        {-}{-}}
+\DocumentationTok{\#\# covse23   0.025686   {-}{-}  0.00068323     2.7  1413   0.72681}
+\DocumentationTok{\#\# corse23    0.28712   {-}{-}   0.0032872     1.1  7629   0.14051}
+\DocumentationTok{\#\# covsp23 0.00027449   {-}{-}  2.1281e{-}06     0.8 16637 0.0058801}
+\DocumentationTok{\#\# corsp23    0.22135   {-}{-}   0.0016817     0.8 17325 0.0052108}
+\DocumentationTok{\#\#                }
+\DocumentationTok{\#\#            psrf}
+\DocumentationTok{\#\# se[1]         1}
+\DocumentationTok{\#\# se[2]    1.0038}
+\DocumentationTok{\#\# se[3]    1.0054}
+\DocumentationTok{\#\# sp[1]    1.0025}
+\DocumentationTok{\#\# sp[2]    1.0001}
+\DocumentationTok{\#\# sp[3]    1.0004}
+\DocumentationTok{\#\# prev[1]  1.0006}
+\DocumentationTok{\#\# prev[2]  1.0037}
+\DocumentationTok{\#\# covse12      {-}{-}}
+\DocumentationTok{\#\# corse12      {-}{-}}
+\DocumentationTok{\#\# covsp12      {-}{-}}
+\DocumentationTok{\#\# corsp12      {-}{-}}
+\DocumentationTok{\#\# covse13      {-}{-}}
+\DocumentationTok{\#\# corse13      {-}{-}}
+\DocumentationTok{\#\# covsp13      {-}{-}}
+\DocumentationTok{\#\# corsp13      {-}{-}}
+\DocumentationTok{\#\# covse23  1.0034}
+\DocumentationTok{\#\# corse23  1.0016}
+\DocumentationTok{\#\# covsp23 0.99998}
+\DocumentationTok{\#\# corsp23  1.0002}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# Total time taken: 9.4 seconds}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\begin{frame}{Practical considerations}
+\protect\hypertarget{practical-considerations}{}
+\begin{itemize}
+\tightlist
+\item
+  Correlation terms add complexity to the model in terms of:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Opportunity to make a coding mistake
+  \item
+    Reduced identifiability
+  \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\item
+  The template\_huiwalter function helps us with coding mistakes
+\item
+  Only careful consideration of covariance terms can help us with
+  identifiability
+\end{itemize}
+\end{frame}
+
+\hypertarget{how-to-interpret-the-latent-class}{%
+\section{How to interpret the latent
+class}\label{how-to-interpret-the-latent-class}}
+
+\begin{frame}{A hierarchy of latent states}
+\protect\hypertarget{a-hierarchy-of-latent-states}{}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-22-1.pdf}
+\normalsize
+\end{frame}
+
+\begin{frame}{What is sensitivity and specificity?}
+\protect\hypertarget{what-is-sensitivity-and-specificity}{}
+\begin{itemize}
+\item
+  The probability of test status conditional on true disease status?
+\item
+  The probability of test status conditional on the latent state?
+\end{itemize}
+
+\pause
+
+So is the latent state the same as the true disease state?
+
+\pause
+
+Important quote:
+
+``Latent class models involve pulling \textbf{something} out of a hat,
+and deciding to call it a rabbit''
+
+\begin{itemize}
+\tightlist
+\item
+  Nils Toft
+\end{itemize}
+\end{frame}
+
+\begin{frame}{When should we correct for correlation?}
+\protect\hypertarget{when-should-we-correct-for-correlation}{}
+\begin{itemize}
+\item
+  For each of the following DAG:
+
+  \begin{itemize}
+  \item
+    Consider what is the latent class
+  \item
+    Consider which correlation terms we should include and why
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-23-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  No correlation to model!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-24-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  No correlation to model \ldots{} but ``infected'' is not the latent
+  class
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-25-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Same as above!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-26-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Tests B and C are correlated
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-27-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\item
+  All tests are correlated with respect to infected BUT infected is not
+  the latent class
+\item
+  Tests B and C are correlated with respect to antibodies - but maybe
+  not substantially?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-28-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  No correlation to model
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\scriptsize\includegraphics{Session_4_files/figure-beamer/unnamed-chunk-29-1.pdf}
+\normalsize
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  No correlation to model - but ``infected'' is not the latent class
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Publication of your results}
+\protect\hypertarget{publication-of-your-results}{}
+STARD-BLCM: A helpful structure to ensure that papers contain all
+necessary information
+
+\begin{itemize}
+\tightlist
+\item
+  You should follow this and refer to it in your articles!
+\end{itemize}
+
+\pause
+
+If you use the software, please cite JAGS:
+
+\begin{itemize}
+\tightlist
+\item
+  Plummer, M. (2003). JAGS : A Program for Analysis of Bayesian
+  Graphical Models Using Gibbs Sampling JAGS : Just Another Gibbs
+  Sampler. Proceedings of the 3rd International Workshop on Distributed
+  Statistical Computing (DSC 2003), March 20--22,Vienna, Austria. ISSN
+  1609-395X. \url{https://doi.org/10.1.1.13.3406}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+And R:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{citation}\NormalTok{()}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# To cite R in publications use:}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\#   R Core Team (2021). R: A language and environment}
+\DocumentationTok{\#\#   for statistical computing. R Foundation for}
+\DocumentationTok{\#\#   Statistical Computing, Vienna, Austria. URL}
+\DocumentationTok{\#\#   https://www.R{-}project.org/.}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# A BibTeX entry for LaTeX users is}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\#   @Manual\{,}
+\DocumentationTok{\#\#     title = \{R: A Language and Environment for Statistical Computing\},}
+\DocumentationTok{\#\#     author = \{\{R Core Team\}\},}
+\DocumentationTok{\#\#     organization = \{R Foundation for Statistical Computing\},}
+\DocumentationTok{\#\#     address = \{Vienna, Austria\},}
+\DocumentationTok{\#\#     year = \{2021\},}
+\DocumentationTok{\#\#     url = \{https://www.R{-}project.org/\},}
+\DocumentationTok{\#\#   \}}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# We have invested a lot of time and effort in creating}
+\DocumentationTok{\#\# R, please cite it when using it for data analysis.}
+\DocumentationTok{\#\# See also \textquotesingle{}citation("pkgname")\textquotesingle{} for citing R packages.}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+And runjags:
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{citation}\NormalTok{(}\StringTok{"runjags"}\NormalTok{)}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# To cite runjags in publications use:}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\#   Matthew J. Denwood (2016). runjags: An R Package}
+\DocumentationTok{\#\#   Providing Interface Utilities, Model Templates,}
+\DocumentationTok{\#\#   Parallel Computing Methods and Additional}
+\DocumentationTok{\#\#   Distributions for MCMC Models in JAGS. Journal of}
+\DocumentationTok{\#\#   Statistical Software, 71(9), 1{-}25.}
+\DocumentationTok{\#\#   doi:10.18637/jss.v071.i09}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\# A BibTeX entry for LaTeX users is}
+\DocumentationTok{\#\# }
+\DocumentationTok{\#\#   @Article\{,}
+\DocumentationTok{\#\#     title = \{\{runjags\}: An \{R\} Package Providing Interface Utilities, Model Templates, Parallel Computing Methods and Additional Distributions for \{MCMC\} Models in \{JAGS\}\},}
+\DocumentationTok{\#\#     author = \{Matthew J. Denwood\},}
+\DocumentationTok{\#\#     journal = \{Journal of Statistical Software\},}
+\DocumentationTok{\#\#     year = \{2016\},}
+\DocumentationTok{\#\#     volume = \{71\},}
+\DocumentationTok{\#\#     number = \{9\},}
+\DocumentationTok{\#\#     pages = \{1{-}{-}25\},}
+\DocumentationTok{\#\#     doi = \{10.18637/jss.v071.i09\},}
+\DocumentationTok{\#\#   \}}
+\end{Highlighting}
+\end{Shaded}
+
+\normalsize
+\end{frame}
+
+\hypertarget{practical-session-4}{%
+\section{Practical session 4}\label{practical-session-4}}
+
+\begin{frame}[fragile]{Points to consider}
+\protect\hypertarget{points-to-consider}{}
+\begin{enumerate}
+\item
+  How does including a third test impact the inference for the first two
+  tests?
+\item
+  What happens if we include correlation between tests?
+\end{enumerate}
+
+\begin{comment}
+
+## Exercise 1 {.fragile}
+
+Use the template_huiwalter function to look at the simple 2-test 5-population example from session 3.  Use this data simulation code:
+
+\scriptsize
+
+```r
+# Set a random seed so that the data are reproducible:
+set.seed(2022-09-13)
+
+sensitivity <- c(0.9, 0.6)
+specificity <- c(0.95, 0.9)
+N <- 1000
+
+# Change the number of populations here:
+Populations <- 5
+# Change the variation in prevalence here:
+(prevalence <- runif(Populations, min=0.1, max=0.9))
+
+data <- tibble(Population = sample(seq_len(Populations), N, replace=TRUE)) %>%
+  mutate(Status = rbinom(N, 1, prevalence[Population])) %>%
+  mutate(Test1 = rbinom(N, 1, sensitivity[1]*Status + (1-specificity[1])*(1-Status))) %>%
+  mutate(Test2 = rbinom(N, 1, sensitivity[2]*Status + (1-specificity[2])*(1-Status))) %>%
+  select(-Status)
+
+(twoXtwoXpop <- with(data, table(Test1, Test2, Population)))
+(Tally <- matrix(twoXtwoXpop, ncol=Populations))
+(TotalTests <- apply(Tally, 2, sum))
+
+template_huiwalter(data, outfile="template_2test.txt")
+```
+
+\normalsize
+
+Look at the model code and familiarise yourself with how the model is set out (there are some small differences, but the overall code is equivalent).  Make sure you can modify the priors and add a deviance monitor.  Run the model.
+
+Now activate the correlation terms between tests 1 and 2.  Is anything different about the results?
+
+### Solution 1 {.fragile}
+
+There is no particular solution to the first part of this exercise, but please ask if you have any questions about the model code that template_huiwalter generates.  Remember that re-running the template_huiwalter function will over-write your existing model including any changes you made, so be careful!
+
+We can run the model as follows:
+
+\scriptsize
+
+```r
+results_nocov <- run.jags("template_2test.txt")
+results_nocov
+```
+
+\normalsize
+
+
+A shortcut for activating the covariance terms is to re-run template_huiwalter as follows:
+
+\scriptsize
+
+```r
+template_huiwalter(data, outfile="template_2test_cov.txt", covariance=TRUE)
+results_cov <- run.jags("template_2test_cov.txt")
+results_cov
+```
+
+\normalsize
+
+Activating the covariance terms with 2 tests has made the model less identifiable, and has therefore decreased the effective sample size and increased the width of the 95% CI for all of the parameters to the point that the model is no longer very useful.  This is not something that we recommend you do in practice, even if the two tests are known to be correlated!  We will revisit this issue tomorrow.
+
+## Exercise 2 {.fragile}
+
+Simulate some Covid data based on the R code given above (under "Dealing with correlation: Covid example") and analyse the data using the default priors.  Interpret the results and compare them to the known values:
+
+\scriptsize
+
+```r
+covid_sensitivity
+covid_specificity
+```
+
+\normalsize
+
+Now exclude the NoseAG test from the dataset, re-generate the model code (without covariance terms), run the model, and interpret the results.  How have the posteriors for the throat tests been affected by excluding the nose swab test?
+
+### Solution 2 {.fragile}
+
+Here are the results for all 3 tests:
+
+\scriptsize
+
+```r
+results_3t <- run.jags('covidmodel.txt')
+results_3t
+```
+
+\normalsize
+
+I have omitted the trace plots here but make sure to always check them!  You can see that the true values for overall sensitivity and specificity are within their respective 95% CI:
+
+\scriptsize
+
+```r
+covid_sensitivity
+covid_specificity
+```
+
+\normalsize
+
+You should also notice that the model has detected a positive covariance between tests 2 and 3 (the throat swab tests), although the 95% CI does include zero.  Estimating covariance terms is extremely difficult for the model to do accurately.
+
+Excluding the nasal swab test gives us these results:
+
+\scriptsize
+
+```r
+template_huiwalter(covid_data %>% select(Population, ThroatAG, ThroatPCR), outfile = 'covidmodel_2t.txt')
+
+results_2t <- run.jags('covidmodel_2t.txt')
+results_2t
+```
+
+\normalsize
+
+
+
+The posterior estimates for sensitivity have been affected for both tests, and neither now identify the true simulation parameter:
+
+\scriptsize
+
+```r
+test2 <- combine.mcmc(results_2t, vars="se", return.samples = 10000)
+test3 <- combine.mcmc(results_3t, vars="se[2:3]", return.samples = 10000)
+
+bind_rows(
+  tibble(Model = "TwoTest", ThroatAG = test2[,1], ThroatPCR = test2[,2]),
+  tibble(Model = "ThreeTest", ThroatAG = test3[,1], ThroatPCR = test3[,2])
+) %>%
+  pivot_longer(c(ThroatAG, ThroatPCR), names_to = "Test", values_to = "Estimate") %>%
+  ggplot() +
+  aes(x = Estimate, col = Model) +
+  geom_density() +
+  facet_wrap( ~ Test)
+```
+
+\normalsize
+
+However, they do look more similar to the probabilities of detection conditional on shedding:
+
+\scriptsize
+
+```r
+antigen_detection
+pcr_detection
+```
+
+\normalsize
+
+Have a think about why this might be the case.  We will spend a lot of time discussing this topic tomorrow!
+
+
+## Optional exercise A {.fragile}
+
+Re-fit a model to this data using all three possible covse and covsp parameters between all 3 tests
+
+What do you notice about the results?
+
+### Solution A {.fragile}
+
+You can either manually change all 3 covse/covsp from before, or regenerate the model using the covariance=TRUE option:
+
+\scriptsize
+
+```r
+template_huiwalter(covid_data %>% select(Population, NoseAG, ThroatAG, ThroatPCR), outfile='covidmodel_allcov.txt', covariance=TRUE)
+results_allcov <- run.jags('covidmodel_allcov.txt')
+```
+
+\normalsize
+
+\scriptsize\normalsize
+
+\scriptsize
+
+```r
+results_allcov
+```
+
+\normalsize
+
+The effective sample size is much lower, because the model is less identifiable.  But otherwise the model does a reasonable job of estimating the parameters due to the large sample size, albeit with wider 95% CI then with only covariance between throat swab tests included  This might not be the case with a smaller sample size!
+
+\end{comment}
+\end{frame}
+
+\begin{frame}[fragile]{Summary}
+\protect\hypertarget{summary}{}
+\begin{itemize}
+\tightlist
+\item
+  Including multiple tests is technically easy
+
+  \begin{itemize}
+  \tightlist
+  \item
+    But philosophically more difficult!!!
+  \end{itemize}
+\item
+  Complexity of adding correlation terms increases non-linearly with
+  more tests
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Probably best to stick to correlations with biological
+    justification?
+  \end{itemize}
+\item
+  Adding/removing test results may change the posterior for
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Other test Se / Sp
+  \item
+    Prevalence
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
