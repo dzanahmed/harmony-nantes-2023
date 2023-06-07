@@ -1,5 +1,7 @@
 ## TODO:
 
+rm(.runjags.options)
+
 # move general setup code here so it is re-used
 # use start/end functions
 # set working directory and auto-cleanup anything created
