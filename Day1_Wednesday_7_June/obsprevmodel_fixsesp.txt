@@ -1,0 +1,18 @@
+model{
+  # Likelihood part:
+  Positives ~ dbinom(observed_prevalence, N)
+  
+  # Intermediate calculations:
+  observed_prevalence <- sensitivity * prevalence + (1-specificity) * (1-prevalence)
+  
+  # Prior part:
+  sensitivity ~ dbeta(1, 1)
+  specificity ~ dbeta(1, 1)
+  prevalence ~ dbeta(1, 1)
+  
+  # Hooks for automatic integration with R:
+  #data# Positives, N
+  #monitor# prevalence, sensitivity, specificity, observed_prevalence
+  #inits# prevalence, sensitivity, specificity
+
+}
